@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Continue to www.sidwin.com</title>
+</head>
+<body>
+  <p><a id="destination" href="https://www.sidwin.com/">Continue to www.sidwin.com</a></p>
+  <noscript><p>JavaScript is disabled. Use the link above, then navigate to the page you need.</p></noscript>
+  <script>
+    (() => {
+      "use strict";
+      const destination = new URL("https://www.sidwin.com/");
+      destination.pathname = window.location.pathname;
+      destination.search = window.location.search;
+      destination.hash = window.location.hash;
+      document.getElementById("destination").href = destination.href;
+      if (window.location.hostname === "sidwin.com") {
+        window.location.replace(destination.href);
+      }
+    })();
+  </script>
+</body>
+</html>
